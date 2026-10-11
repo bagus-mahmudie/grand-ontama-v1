@@ -1,0 +1,107 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# ================
+# 1. Root = beranda.html
+# ================
+DirectoryIndex beranda.html
+
+# ================
+# 2. Redirect /beranda → /
+#    (agar URL beranda hanya / saja)
+# ================
+RewriteRule ^beranda/?$ / [L,R=301]
+
+# ================
+# 3. Jika file/folder asli ada → langsung tampilkan tanpa rewrite
+# ================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ================
+# 4. Hilangkan .html dari URL
+#    contoh: /rumah-dijual.html → /rumah-dijual
+# ================
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
+RewriteRule ^ %1 [R=301,L]
+
+# ================
+# 5. Akses URL tanpa .html kalau file ada
+#    contoh: /rumah-dijual → rumah-dijual.html
+# ================
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+</IfModule>
+
+# =========================
+# CACHE EXPIRES
+# =========================
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML, CSS, JS selalu cek update terbaru
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 0 seconds"
+  ExpiresByType text/javascript "access plus 0 seconds"
+
+  # Gambar cache panjang
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Font cache panjang
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # Audio/video cache panjang
+  ExpiresByType audio/mpeg "access plus 1 year"
+  ExpiresByType audio/mp3 "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/webm "access plus 1 year"
+</IfModule>
+
+# =========================
+# CACHE HEADERS
+# =========================
+<IfModule mod_headers.c>
+  # HTML dan PHP selalu cek update
+  <FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header unset Pragma
+  </FilesMatch>
+
+  # CSS dan JS selalu cek update
+  # Jadi app.js dan tailwind.css tidak nyangkut cache lama
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+    Header unset Pragma
+  </FilesMatch>
+
+  # Service worker wajib selalu fresh
+  <Files "sw.js">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </Files>
+
+  # File SEO dan sitemap jangan dicache agresif
+  <FilesMatch "\.(xml|txt|xsl)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Gambar, font, audio, video cache panjang
+  <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|ico|woff|woff2|mp3|mp4|webm|ogg|wav|m4a)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,264 @@
+<!-- Top Bar -->
+<div
+  data-topbar
+  class="fixed left-0 right-0 top-0 z-50 flex h-14 items-center bg-brand text-white transition-transform duration-300"
+>
+  <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4">
+    <div class="hidden items-center gap-5 text-base lg:flex">
+      <a
+        href="https://wa.me/6285888090888"
+        target="_blank"
+        class="inline-flex items-center gap-2 transition hover:text-white/80"
+      >
+        <i class="bi bi-telephone"></i>
+        <span>+62 858-8809-0888</span>
+      </a>
+
+      <a
+        href="mailto:omahlenterainovasi@gmail.com"
+        target="_blank"
+        class="inline-flex items-center gap-2 transition hover:text-white/80"
+      >
+        <i class="bi bi-envelope"></i>
+        <span>omahlenterainovasi@gmail.com</span>
+      </a>
+
+      <a
+        href="https://maps.app.goo.gl/rHLo7vV3wvy926an9"
+        target="_blank"
+        class="inline-flex items-center gap-2 transition hover:text-white/80"
+      >
+        <i class="bi bi-geo-alt"></i>
+        <span>Curug, Gunung Sindur, Bogor</span>
+      </a>
+    </div>
+
+    <div class="ml-auto flex items-center gap-2">
+      <a
+        href="https://youtu.be/1VvZTPfR_x4?si=VlJxXUe8qyGrJnKc"
+        target="_blank"
+        aria-label="Youtube Grand Ontama"
+        class="grid h-9 w-9 place-items-center rounded-full bg-white text-brand transition hover:bg-brand-dark hover:text-white"
+      >
+        <i class="bi bi-youtube"></i>
+      </a>
+
+      <a
+        href="https://www.instagram.com/grandontama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        target="_blank"
+        aria-label="Instagram Grand Ontama"
+        class="grid h-9 w-9 place-items-center rounded-full bg-white text-brand transition hover:bg-brand-dark hover:text-white"
+      >
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@grandontama?_t=ZS-8zf3x3nwkwa&_r=1"
+        target="_blank"
+        aria-label="TikTok Grand Ontama"
+        class="grid h-9 w-9 place-items-center rounded-full bg-white text-brand transition hover:bg-brand-dark hover:text-white"
+      >
+        <i class="bi bi-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav
+  data-navbar
+  class="fixed left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300"
+>
+  <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
+    <a href="/" aria-label="Grand Ontama" class="inline-flex items-center">
+      <img
+        src="assets/img/grand-ontama-logo.webp"
+        alt="Grand Ontama Logo"
+        class="h-14 w-auto"
+      />
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden items-center gap-9 lg:flex">
+      <a
+        data-nav-link
+        data-page="beranda"
+        href="/"
+        class="relative py-2 text-base font-medium text-content-grey transition hover:text-brand after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand after:transition-all data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        Beranda
+      </a>
+
+      <a
+        data-nav-link
+        data-page="tentang-kami"
+        href="tentang-kami"
+        class="relative py-2 text-base font-medium text-content-grey transition hover:text-brand after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand after:transition-all data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        Tentang Kami
+      </a>
+
+      <a
+        data-nav-link
+        data-page="rumah-dijual"
+        href="rumah-dijual"
+        class="relative py-2 text-base font-medium text-content-grey transition hover:text-brand after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand after:transition-all data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        Rumah Dijual
+      </a>
+
+      <a
+        data-nav-link
+        data-page="blogs"
+        href="blogs"
+        class="relative py-2 text-base font-medium text-content-grey transition hover:text-brand after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand after:transition-all data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        Blog
+      </a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <a
+      href="https://wa.me/6285888090888"
+      target="_blank"
+      class="hidden items-center gap-2 rounded-full bg-brand px-8 py-3 text-base font-medium text-white transition hover:bg-brand-dark lg:inline-flex"
+    >
+      Hubungi Kami
+      <i class="bi bi-arrow-right"></i>
+    </a>
+
+    <!-- Mobile Button -->
+    <button
+      data-mobile-open
+      type="button"
+      aria-label="Buka menu"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-neutral-200 text-2xl text-content-grey lg:hidden"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Overlay -->
+<div
+  data-mobile-overlay
+  class="fixed inset-0 z-50 hidden bg-black/40 lg:hidden"
+></div>
+
+<!-- Mobile Menu -->
+<aside
+  data-mobile-panel
+  class="fixed bottom-0 right-0 top-0 z-60 w-[82%] max-w-sm translate-x-full bg-white shadow-2xl transition-transform duration-300 lg:hidden"
+>
+  <div
+    class="flex items-center justify-between border-b border-neutral-100 px-5 py-5"
+  >
+    <img
+      src="assets/img/grand-ontama-logo.webp"
+      alt="Grand Ontama Logo"
+      class="h-11 w-auto"
+    />
+
+    <button
+      data-mobile-close
+      type="button"
+      aria-label="Tutup menu"
+      class="grid h-10 w-10 place-items-center rounded-full bg-neutral-100 text-xl text-content-grey"
+    >
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <div class="flex h-[calc(100%-84px)] flex-col px-5 py-4">
+    <nav class="space-y-1">
+      <a
+        data-nav-link
+        data-page="beranda"
+        href="/"
+        class="flex items-center justify-between rounded-2xl px-4 py-4 font-medium text-content-grey transition hover:bg-brand/10 hover:text-brand data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        <span>Beranda</span>
+        <i class="bi bi-chevron-right text-sm"></i>
+      </a>
+
+      <a
+        data-nav-link
+        data-page="tentang-kami"
+        href="tentang-kami"
+        class="flex items-center justify-between rounded-2xl px-4 py-4 font-medium text-content-grey transition hover:bg-brand/10 hover:text-brand data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        <span>Tentang Kami</span>
+        <i class="bi bi-chevron-right text-sm"></i>
+      </a>
+
+      <a
+        data-nav-link
+        data-page="rumah-dijual"
+        href="rumah-dijual"
+        class="flex items-center justify-between rounded-2xl px-4 py-4 font-medium text-content-grey transition hover:bg-brand/10 hover:text-brand data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        <span>Rumah Dijual</span>
+        <i class="bi bi-chevron-right text-sm"></i>
+      </a>
+
+      <a
+        data-nav-link
+        data-page="blogs"
+        href="blogs"
+        class="flex items-center justify-between rounded-2xl px-4 py-4 font-medium text-content-grey transition hover:bg-brand/10 hover:text-brand data-[active=true]:font-semibold data-[active=true]:text-brand"
+      >
+        <span>Blog</span>
+        <i class="bi bi-chevron-right text-sm"></i>
+      </a>
+    </nav>
+
+    <div class="mt-auto">
+      <a
+        href="https://wa.me/6285888090888"
+        target="_blank"
+        class="flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 sm:py-4 font-semibold text-white transition hover:bg-brand-dark"
+      >
+        <i class="bi bi-whatsapp"></i>
+        Hubungi Kami
+      </a>
+
+      <div class="mt-5 flex justify-center gap-2">
+        <a
+          href="https://youtu.be/1VvZTPfR_x4?si=VlJxXUe8qyGrJnKc"
+          target="_blank"
+          aria-label="Youtube Grand Ontama"
+          class="grid h-10 w-10 place-items-center rounded-full bg-brand/10 text-brand transition hover:bg-brand hover:text-white"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/grandontama?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+          aria-label="Instagram Grand Ontama"
+          class="grid h-10 w-10 place-items-center rounded-full bg-brand/10 text-brand transition hover:bg-brand hover:text-white"
+        >
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@grandontama?_t=ZS-8zf3x3nwkwa&_r=1"
+          target="_blank"
+          aria-label="TikTok Grand Ontama"
+          class="grid h-10 w-10 place-items-center rounded-full bg-brand/10 text-brand transition hover:bg-brand hover:text-white"
+        >
+          <i class="bi bi-tiktok"></i>
+        </a>
+
+        <a
+          href="https://wa.me/6285888090888"
+          target="_blank"
+          aria-label="WhatsApp Grand Ontama"
+          class="grid h-10 w-10 place-items-center rounded-full bg-brand/10 text-brand transition hover:bg-brand hover:text-white"
+        >
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>

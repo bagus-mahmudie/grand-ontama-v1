@@ -1,0 +1,39 @@
+
+# Local secrets and configuration
+.env
+.env.*
+.env*copy*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Dependencies and generated files
+/node_modules/
+/vendor/
+/_site/
+/dist/
+/.cache/
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+/public/build/
+/public/hot
+/public/storage
+# Runtime data and local exports
+/storage/**
+!/storage/**/
+!/storage/**/.gitignore
+**/uploads/
+*.sql
+*.sqlite*
+*.db
+*.log
+*.zip
+*.rar
+*.7z
+*.bak
+*.exe
+.phpunit.result.cache
+/.idea/
+/.vscode/
+/mailer/config.php
