@@ -1,41 +1,41 @@
 # Grand Ontama V1
 
-Versi awal website Grand Ontama dengan halaman tipe rumah, galeri, fasilitas, dan artikel properti.
+Initial version of the Grand Ontama website featuring house type pages, a gallery, facilities, and property articles.
 
-**Status:** Pengembangan lokal; demo publik belum tersedia.
+**Status:** Local development; a public demo is not yet available.
 
-## Fitur
+## Features
 
-- Halaman tipe rumah Luxora, Melodia, dan Verona
-- Galeri interior serta informasi fasilitas
-- Artikel properti dan formulir kontak PHP
+- Luxora, Melodia, and Verona house type pages
+- Interior gallery and facility information
+- Property articles and a PHP contact form
 
-## Teknologi
+## Technology
 
 HTML, Tailwind CSS 4, JavaScript, PHP / PHPMailer.
 
-## Menjalankan secara lokal
+## Running Locally
 
-Gunakan server Apache/PHP, misalnya XAMPP. Tempatkan salinan proyek pada document root dan buka `beranda.html` melalui localhost. Aturan `.htaccess`, jika tersedia, membutuhkan Apache dengan konfigurasi yang sesuai.
+Use an Apache/PHP server, such as XAMPP. Place a copy of the project in the document root and open `beranda.html` through localhost. Any `.htaccess` rules require an appropriately configured Apache server.
 
-Jalankan `composer install` untuk memasang PHPMailer.
+Run `composer install` to install PHPMailer.
 
-Untuk membangun stylesheet, jalankan `npm ci` lalu `npm run build`.
+To build the stylesheet, run `npm ci` followed by `npm run build`.
 
-## Versi proyek
+## Project Versions
 
-Versi ini disimpan sebagai proyek lokal. Website live menggunakan [Grand Ontama redesign](https://github.com/bagus-mahmudie/grand-ontama).
+This version is retained as a local project. The live website uses the [Grand Ontama redesign](https://github.com/bagus-mahmudie/grand-ontama).
 
-## Konfigurasi privat
+## Private Configuration
 
-Salin template berikut ke nama file lokalnya, lalu isi nilai untuk lingkungan Anda:
+Copy the following templates to their corresponding local filenames, then enter the values for your environment:
 
-| Template | File lokal |
+| Template | Local File |
 | --- | --- |
 | `mailer/config.example.php` | `mailer/config.php` |
 
-File konfigurasi lokal diabaikan oleh Git. Jangan memasukkan password, API key, atau data akun ke source code.
+Local configuration files are ignored by Git. Do not include passwords, API keys, or account data in the source code.
 
-## Catatan repository
+## Repository Notes
 
-Dependensi terpasang, cache, file `.env`, database, dan unggahan pengguna tidak disertakan. Nama merek dan aset pihak ketiga tetap mengikuti hak pemiliknya. Tidak ada lisensi penggunaan ulang yang diberikan melalui repository ini.
+Installed dependencies, caches, `.env` files, databases, and user uploads are not included. Brand names and third-party assets remain subject to their respective owners' rights. This repository does not grant a license for reuse.
