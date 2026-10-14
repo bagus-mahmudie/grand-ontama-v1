@@ -4,6 +4,10 @@ Initial version of the Grand Ontama website featuring house type pages, a galler
 
 **Status:** Local development; a public demo is not yet available.
 
+## Preview
+
+[![Grand Ontama V1 — application preview](docs/screenshots/project-preview.png)](docs/screenshots/project-preview.png)
+
 ## Features
 
 - Luxora, Melodia, and Verona house type pages
